@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="back-button-field">
+        <i></i>
+    </div>
+    
+    <div class="container">
+
+        <div class="login-header">
+                <i class="fa-solid fa-arrow-left unvisible"></i>
+                <p class="header-text">LOGIN</p>
+        </div>
+
+        
+        
+        <div class="login-form">
+
+            <div class="login-form-inner">
+                <label for="username" class="username-label">Kullanıcı Adı</label>
+                <input type="text" name="" id="username" ><br>
+            
+                <label for="password" class="password-label">Şifre</label>
+                <input type="password" name="" id="password"><i class="fa-solid fa-eye" onclick="togglePassword(this)"></i> 
+                
+                <div class="flex ">
+                    <div>
+                        <input type="checkbox" name="" id="remember" >
+                        <label for="remember" >Beni Hatırla</label>
+                    </div>
+                    
+                    <p class="cursor-pointer to-reset-password">Şifremi Unuttum</p>
+                </div>
+
+                <div class="login-button-field">
+                    <button class="login-button">Giriş Yap</button>
+                    <p class="to-register cursor-pointer">Hesabım Yok</p>
+
+                </div> 
+                    
+            </div>  
+
+        </div>
+
+        <p class="state " id="login-state"></p>
+
+        <div class="register-form hide">
+            <div class="register-form-inner">
+
+                <label for="register-username" class="username-label">Kullanıcı Adı</label>
+                <input type="text" name="" id="register-username"><br>
+            
+                <label for="register-password" class="password-label">Şifre</label>
+                <input type="password" name="" id="register-password"><i class="fa-solid fa-eye" onclick="togglePassword(this)"></i> <br>
+
+                <label for="register-email" class="email-label">E-Posta</label>
+                <input type="email" name="" id="register-email">
+
+                <div class="register-button-field">
+                    
+                    <button class="register-button">Kayıt Ol</button>
+                    
+                </div>
+
+                <p class="state " id="register-state"></p>
+
+            </div>
+
+        </div>
+
+        <div class="password-form hide">
+            <div class="password-form-inner">
+
+                <label for="password-code" class="username-label">Kod</label>
+                <input type="text" name="" id="password-code"><br>
+            
+                <label for="new-password" class="password-label">Yeni Şifre</label>
+                <input type="password" name="" id="new-password"><i class="fa-solid fa-eye" onclick="togglePassword(this)"></i> <br>
+
+                <label for="confirm-password" class="email-label">Şifre (Tekrar)</label>
+                <input type="password" name="" id="confirm-password"><i class="fa-solid fa-eye" onclick="togglePassword(this)"></i>
+
+                <div class="password-button-field">
+                    <button class="send-code-button">Kod Gönder</button>
+                    <button class="change-button">Şifre Değiştir</button>
+                    
+                </div>
+                
+                    <p class="state " id="password-state"></p>
+                    <p class="state " id="send-code-state"></p>
+               
+            </div>
+
+        </div>
+
+    </div>
+    
+
+    <script src="login.js"></script>
+</body>
+</html>
